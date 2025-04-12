@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/xpg?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+  mybatis-plus:
+    configuration:
+      map-underscore-to-camel-case: false
+  session:
+    timeout: 66880
+    global-config:
+      db-config:
+        logic-delete-field: isDelete # 全局逻辑删除字段名
+        logic-delete-value: 1 # 逻辑已删除值
+        logic-not-delete-value: 0 # 逻辑未删除值
