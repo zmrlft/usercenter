@@ -1,9 +1,6 @@
 package com.xpg.usercenter.model.domain;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableLogic;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 
 import java.util.Date;
@@ -29,12 +26,14 @@ public class User {
     /**
      * 账号
      */
-    private String useraccount;
+    @TableField("userAccount")
+    private String userAccount;
 
     /**
      * 用户头像
      */
-    private String avatarurl;
+    @TableField("avatarUrl")
+    private String avatarUrl;
 
     /**
      * 性别
@@ -44,7 +43,8 @@ public class User {
     /**
      * 密码
      */
-    private String userpassword;
+    @TableField("userPassword")
+    private String userPassword;
 
     /**
      * 电话
@@ -59,17 +59,20 @@ public class User {
     /**
      * 状态0正常
      */
-    private Integer userstatus;
+    @TableField("userStatus")
+    private Integer userStatus;
 
     /**
      * 创建时间
      */
-    private Date createtime;
+    @TableField("createTime")
+    private Date createTime;
 
     /**
      * 
      */
-    private Date updatetime;
+    @TableField("updateTime")
+    private Date updateTime;
 
     /**
      * 是否删除
@@ -80,5 +83,12 @@ public class User {
     /**
      * 用户角色0普通，1管理员
      */
-    private Integer userrole;
+    @TableField("userRole")
+    private Integer userRole;
+
+    /**
+     * 星球编号
+     */
+    @TableField("planetCode")
+    private String planetCode;
 }
